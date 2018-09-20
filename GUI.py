@@ -6,6 +6,53 @@ class QTEGUI:
 
     def __init__(self, master):
 
+        #def settings():
+
+        def settingsNQSS():
+            Ingredients = {}
+            with open('Ingredients.csv', 'r') as csvfile:
+                ingReader = csv.reader(csvfile, delimiter=' ')
+                for row in ingReader:
+                    row = row[0].strip('\n')
+                    Ingredient, Prices = row.split(',')
+                    Ingredients[Ingredient] = Prices
+
+            Extras = {}
+            with open('Extras.csv', 'r') as csvfile:
+                extReader = csv.reader(csvfile, delimiter=' ')
+                for row in extReader:
+                    row = row[0].strip('\n')
+                    Extra, Prices = row.split(',')
+                    Extras[Extra] = Prices
+
+            ingName = self.ingredientsNQSE.get()
+            ingPrice = self.ingredientsNQSEP.get()
+
+            extraName = self.extrasNQSE.get()
+            extraprice = self.extrasNQSEP.get()
+
+            labourPrice = self.labourNQSE.get()
+
+            Ingredients[ingName] = ingPrice
+
+            Extras[extraName] = extraprice
+
+            startUpA()
+
+            with open('Ingredients.csv', 'w') as csvfile:
+                ingWriter = csv.writer(csvfile, delimiter=',')
+                for row in Ingredients:
+                    ingWriter.writerow([row] + [Ingredients[row]])
+
+            with open('Extras.csv', 'w') as csvfile:
+                extWriter = csv.writer(csvfile, delimiter=',')
+                for row in Extras:
+                    extWriter.writerow([row] + [Extras[row]])
+
+            O = open("Labour", "w")
+
+            O.write(labourPrice)
+
         def spacerFRG(self, F, NAME):
             name = ("Spacer" + NAME)
 
@@ -123,6 +170,7 @@ class QTEGUI:
             self.pageTitle4.grid_remove()
             self.ingredientsNQSL.grid_remove()
             self.ingredientsNQSE.grid_remove()
+            self.ingredientsNQSEP.grid_remove()
             tableFrameNQS1.grid_remove()
 
             for o in range(6, 8):
@@ -133,6 +181,7 @@ class QTEGUI:
 
             self.extrasNQSL.grid_remove()
             self.extrasNQSE.grid_remove()
+            self.extrasNQSEP.grid_remove()
             tableFrameNQS2.grid_remove()
 
             for o in range(10, 12):
@@ -306,6 +355,7 @@ class QTEGUI:
             self.pageTitle4.grid()
             self.ingredientsNQSL.grid()
             self.ingredientsNQSE.grid()
+            self.ingredientsNQSEP.grid()
             tableFrameNQS1.grid()
 
             for o in range(6, 8):
@@ -316,6 +366,7 @@ class QTEGUI:
 
             self.extrasNQSL.grid()
             self.extrasNQSE.grid()
+            self.extrasNQSEP.grid()
             tableFrameNQS2.grid()
 
             for o in range(10, 12):
@@ -386,6 +437,7 @@ class QTEGUI:
             self.pageTitle4.grid_remove()
             self.ingredientsNQSL.grid_remove()
             self.ingredientsNQSE.grid_remove()
+            self.ingredientsNQSEP.grid_remove()
             tableFrameNQS1.grid_remove()
 
             for o in range(6, 8):
@@ -396,6 +448,7 @@ class QTEGUI:
 
             self.extrasNQSL.grid_remove()
             self.extrasNQSE.grid_remove()
+            self.extrasNQSEP.grid_remove()
             tableFrameNQS2.grid_remove()
 
             for o in range(10, 12):
@@ -534,6 +587,7 @@ class QTEGUI:
             self.pageTitle4.grid_remove()
             self.ingredientsNQSL.grid_remove()
             self.ingredientsNQSE.grid_remove()
+            self.ingredientsNQSEP.grid_remove()
             tableFrameNQS1.grid_remove()
 
             for o in range(6, 8):
@@ -544,6 +598,7 @@ class QTEGUI:
 
             self.extrasNQSL.grid_remove()
             self.extrasNQSE.grid_remove()
+            self.extrasNQSEP.grid_remove()
             tableFrameNQS2.grid_remove()
 
             for o in range(10, 12):
@@ -653,6 +708,7 @@ class QTEGUI:
             self.pageTitle4.grid_remove()
             self.ingredientsNQSL.grid_remove()
             self.ingredientsNQSE.grid_remove()
+            self.ingredientsNQSEP.grid_remove()
             tableFrameNQS1.grid_remove()
 
             for o in range(6, 8):
@@ -663,6 +719,7 @@ class QTEGUI:
 
             self.extrasNQSL.grid_remove()
             self.extrasNQSE.grid_remove()
+            self.extrasNQSEP.grid_remove()
             tableFrameNQS2.grid_remove()
 
             for o in range(10, 12):
@@ -886,9 +943,13 @@ class QTEGUI:
                     NAME = ("S" + str(o) + str(i))
                     spacerFRM(self, F, NAME)
 
-            newQuote()
+            newQuoteB()
 
         def startUpD():
+
+            O = open("Labour", "r")
+
+            Labour = O.read()
 
             self.pageTitle4 = Label(Frame3, text="Settings Of New Quote")
             self.pageTitle4.config(font=("TkDefaultFont", 30))
@@ -899,6 +960,9 @@ class QTEGUI:
 
             self.ingredientsNQSE = Entry(Frame3, width=14)
             self.ingredientsNQSE.grid(row=4, column=3, sticky=W)
+
+            self.ingredientsNQSEP = Entry(Frame3, width=14)
+            self.ingredientsNQSEP.grid(row=4, column=4, sticky=W)
 
             tableNQS1()
             tableFrameNQS1.grid(row=5, column=1, columnspan=4, sticky=N)
@@ -920,6 +984,9 @@ class QTEGUI:
             self.extrasNQSE = Entry(Frame3, width=14)
             self.extrasNQSE.grid(row=8, column=3, sticky=W)
 
+            self.extrasNQSEP = Entry(Frame3, width=14)
+            self.extrasNQSEP.grid(row=8, column=4, sticky=W)
+
             tableNQS2()
             tableFrameNQS2.grid(row=9, column=1, columnspan=4, sticky=N)
 
@@ -934,7 +1001,7 @@ class QTEGUI:
                     S = "W"
                     spacerF(self, master, Frame1, Frame2, Frame3, F, NAME, H, WH, R, C, S)
 
-            self.labourNQSL = Label(Frame3, text="Labour:")
+            self.labourNQSL = Label(Frame3, text="Labour: Per Hour")
             self.labourNQSL.grid(row=12, column=2, sticky=W)
 
             self.labourNQSE = Entry(Frame3, width=14)
@@ -950,7 +1017,7 @@ class QTEGUI:
                 S = "W"
                 spacerF(self, master, Frame1, Frame2, Frame3, F, NAME, H, WH, R, C, S)
 
-            self.labourNQSV = Label(Frame3, text="Variable")
+            self.labourNQSV = Label(Frame3, text=Labour)
             self.labourNQSV.grid(row=14, column=2, columnspan=2, sticky=N)
 
             for o in range(15, 17):
@@ -969,7 +1036,7 @@ class QTEGUI:
             self.cancelNQSB.config(font=("TkDefaultFont", 18))
             self.cancelNQSB.grid(row=17, column=2, sticky=W)
 
-            self.saveNQSB = Button(Frame3, text="Save")
+            self.saveNQSB = Button(Frame3, text="Save", command=settingsNQSS)
             self.saveNQSB.config(font=("TkDefaultFont", 18))
             self.saveNQSB.grid(row=17, column=3, sticky=E)
 
@@ -988,6 +1055,7 @@ class QTEGUI:
             self.pageTitle4.grid_remove()
             self.ingredientsNQSL.grid_remove()
             self.ingredientsNQSE.grid_remove()
+            self.ingredientsNQSEP.grid_remove()
             tableFrameNQS1.grid_remove()
 
             for o in range(6, 8):
@@ -998,6 +1066,7 @@ class QTEGUI:
 
             self.extrasNQSL.grid_remove()
             self.extrasNQSE.grid_remove()
+            self.extrasNQSEP.grid_remove()
             tableFrameNQS2.grid_remove()
 
             for o in range(10, 12):
@@ -1252,8 +1321,12 @@ class QTEGUI:
             f = open("films.csv")
 
             # note here I have sent it root but you can also send it a frame
-            self.newtable = cst(f, tableFrame)
-            self.newtable.grid()
+            try:
+                self.newtable = cst(f, tableFrame)
+
+                self.newtable.grid()
+            except StopIteration:
+                return
 
         tableFrameNQS1 = Frame(Frame3)
 
@@ -1262,18 +1335,26 @@ class QTEGUI:
             f = open("Ingredients.csv")
 
             # note here I have sent it root but you can also send it a frame
-            self.newtable1 = cst(f, tableFrameNQS1)
-            self.newtable1.grid()
+            try:
+                self.newtable1 = cst(f, tableFrameNQS1)
+
+                self.newtable1.grid()
+            except StopIteration:
+                return
 
         tableFrameNQS2 = Frame(Frame3)
 
         def tableNQS2():
             # Your csv file can contain as many rows and colums as needed
-            f = open("Ingredients.csv")
+            f = open("Extras.csv")
 
             # note here I have sent it root but you can also send it a frame
-            self.newtable2 = cst(f, tableFrameNQS2)
-            self.newtable2.grid()
+            try:
+                self.newtable2 = cst(f, tableFrameNQS2)
+
+                self.newtable2.grid()
+            except StopIteration:
+                return
 
         self.titleText = Label(master, text="Bella Cake Art", height=1)
         self.titleText.grid(row=1, column=1, sticky=W),
