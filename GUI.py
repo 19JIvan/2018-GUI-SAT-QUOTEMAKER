@@ -121,6 +121,50 @@ class QTEGUI:
 
 
             self.pageTitle4.grid_remove()
+            self.ingredientsNQSL.grid_remove()
+            self.ingredientsNQSE.grid_remove()
+            tableFrameNQS1.grid_remove()
+
+            for o in range(6, 8):
+                for i in range(1, 5):
+                    F = "Frame3"
+                    NAME = ("NQS" + str(o) + str(i))
+                    spacerFRM(self, F, NAME)
+
+            self.extrasNQSL.grid_remove()
+            self.extrasNQSE.grid_remove()
+            tableFrameNQS2.grid_remove()
+
+            for o in range(10, 12):
+                for i in range(1, 5):
+                    F = "Frame3"
+                    NAME = ("NQS" + str(o) + str(i))
+                    spacerFRM(self, F, NAME)
+
+            self.labourNQSL.grid_remove()
+            self.labourNQSE.grid_remove()
+
+            for i in range(1, 5):
+                F = "Frame3"
+                NAME = ("NQS" + str(i))
+                spacerFRM(self, F, NAME)
+
+            self.labourNQSV.grid_remove()
+
+            for o in range(15, 17):
+                for i in range(1, 5):
+                    F = "Frame3"
+                    NAME = ("NQS" + str(o) + str(i))
+                    spacerFRM(self, F, NAME)
+
+            self.cancelNQSB.grid_remove()
+            self.saveNQSB.grid_remove()
+
+            for o in range(18, 20):
+                for i in range(1, 5):
+                    F = "Frame3"
+                    NAME = ("NQS" + str(o) + str(i))
+                    spacerFRM(self, F, NAME)
 
 
             settingsA()
@@ -260,6 +304,50 @@ class QTEGUI:
         def settingsNQA():
 
             self.pageTitle4.grid()
+            self.ingredientsNQSL.grid()
+            self.ingredientsNQSE.grid()
+            tableFrameNQS1.grid()
+
+            for o in range(6, 8):
+                for i in range(1, 5):
+                    F = "Frame3"
+                    NAME = ("NQS" + str(o) + str(i))
+                    spacerFRG(self, F, NAME)
+
+            self.extrasNQSL.grid()
+            self.extrasNQSE.grid()
+            tableFrameNQS2.grid()
+
+            for o in range(10, 12):
+                for i in range(1, 5):
+                    F = "Frame3"
+                    NAME = ("NQS" + str(o) + str(i))
+                    spacerFRG(self, F, NAME)
+
+            self.labourNQSL.grid()
+            self.labourNQSE.grid()
+
+            for i in range(1, 5):
+                F = "Frame3"
+                NAME = ("NQS" + str(i))
+                spacerFRG(self, F, NAME)
+
+            self.labourNQSV.grid()
+
+            for o in range(15, 17):
+                for i in range(1, 5):
+                    F = "Frame3"
+                    NAME = ("NQS" + str(o) + str(i))
+                    spacerFRG(self, F, NAME)
+
+            self.cancelNQSB.grid()
+            self.saveNQSB.grid()
+
+            for o in range(18, 20):
+                for i in range(1, 5):
+                    F = "Frame3"
+                    NAME = ("NQS" + str(o) + str(i))
+                    spacerFRG(self, F, NAME)
 
         def monthlyProfitB():
 
@@ -295,8 +383,51 @@ class QTEGUI:
             #self.photoI.grid_remove()
             self.printB.grid_remove()
 
-
             self.pageTitle4.grid_remove()
+            self.ingredientsNQSL.grid_remove()
+            self.ingredientsNQSE.grid_remove()
+            tableFrameNQS1.grid_remove()
+
+            for o in range(6, 8):
+                for i in range(1, 5):
+                    F = "Frame3"
+                    NAME = ("NQS" + str(o) + str(i))
+                    spacerFRM(self, F, NAME)
+
+            self.extrasNQSL.grid_remove()
+            self.extrasNQSE.grid_remove()
+            tableFrameNQS2.grid_remove()
+
+            for o in range(10, 12):
+                for i in range(1, 5):
+                    F = "Frame3"
+                    NAME = ("NQS" + str(o) + str(i))
+                    spacerFRM(self, F, NAME)
+
+            self.labourNQSL.grid_remove()
+            self.labourNQSE.grid_remove()
+
+            for i in range(1, 5):
+                F = "Frame3"
+                NAME = ("NQS" + str(i))
+                spacerFRM(self, F, NAME)
+
+            self.labourNQSV.grid_remove()
+
+            for o in range(15, 17):
+                for i in range(1, 5):
+                    F = "Frame3"
+                    NAME = ("NQS" + str(o) + str(i))
+                    spacerFRM(self, F, NAME)
+
+            self.cancelNQSB.grid_remove()
+            self.saveNQSB.grid_remove()
+
+            for o in range(18, 20):
+                for i in range(1, 5):
+                    F = "Frame3"
+                    NAME = ("NQS" + str(o) + str(i))
+                    spacerFRM(self, F, NAME)
 
 
             self.pageTitle5.grid_remove()
@@ -400,8 +531,51 @@ class QTEGUI:
             self.totalLMP.grid_remove()
             self.totalVMP.grid_remove()
 
-
             self.pageTitle4.grid_remove()
+            self.ingredientsNQSL.grid_remove()
+            self.ingredientsNQSE.grid_remove()
+            tableFrameNQS1.grid_remove()
+
+            for o in range(6, 8):
+                for i in range(1, 5):
+                    F = "Frame3"
+                    NAME = ("NQS" + str(o) + str(i))
+                    spacerFRM(self, F, NAME)
+
+            self.extrasNQSL.grid_remove()
+            self.extrasNQSE.grid_remove()
+            tableFrameNQS2.grid_remove()
+
+            for o in range(10, 12):
+                for i in range(1, 5):
+                    F = "Frame3"
+                    NAME = ("NQS" + str(o) + str(i))
+                    spacerFRM(self, F, NAME)
+
+            self.labourNQSL.grid_remove()
+            self.labourNQSE.grid_remove()
+
+            for i in range(1, 5):
+                F = "Frame3"
+                NAME = ("NQS" + str(i))
+                spacerFRM(self, F, NAME)
+
+            self.labourNQSV.grid_remove()
+
+            for o in range(15, 17):
+                for i in range(1, 5):
+                    F = "Frame3"
+                    NAME = ("NQS" + str(o) + str(i))
+                    spacerFRM(self, F, NAME)
+
+            self.cancelNQSB.grid_remove()
+            self.saveNQSB.grid_remove()
+
+            for o in range(18, 20):
+                for i in range(1, 5):
+                    F = "Frame3"
+                    NAME = ("NQS" + str(o) + str(i))
+                    spacerFRM(self, F, NAME)
 
 
             self.pageTitle5.grid_remove()
@@ -443,9 +617,9 @@ class QTEGUI:
                     spacerFRM(self, F, NAME)
 
 
-            pastQuotes()
+            pastQuotesA()
 
-        def pastQuotes():
+        def pastQuotesA():
 
             self.pageTitle2.grid()
             self.searchPQ.grid()
@@ -477,6 +651,50 @@ class QTEGUI:
 
 
             self.pageTitle4.grid_remove()
+            self.ingredientsNQSL.grid_remove()
+            self.ingredientsNQSE.grid_remove()
+            tableFrameNQS1.grid_remove()
+
+            for o in range(6, 8):
+                for i in range(1, 5):
+                    F = "Frame3"
+                    NAME = ("NQS" + str(o) + str(i))
+                    spacerFRM(self, F, NAME)
+
+            self.extrasNQSL.grid_remove()
+            self.extrasNQSE.grid_remove()
+            tableFrameNQS2.grid_remove()
+
+            for o in range(10, 12):
+                for i in range(1, 5):
+                    F = "Frame3"
+                    NAME = ("NQS" + str(o) + str(i))
+                    spacerFRM(self, F, NAME)
+
+            self.labourNQSL.grid_remove()
+            self.labourNQSE.grid_remove()
+
+            for i in range(1, 5):
+                F = "Frame3"
+                NAME = ("NQS" + str(i))
+                spacerFRM(self, F, NAME)
+
+            self.labourNQSV.grid_remove()
+
+            for o in range(15, 17):
+                for i in range(1, 5):
+                    F = "Frame3"
+                    NAME = ("NQS" + str(o) + str(i))
+                    spacerFRM(self, F, NAME)
+
+            self.cancelNQSB.grid_remove()
+            self.saveNQSB.grid_remove()
+
+            for o in range(18, 20):
+                for i in range(1, 5):
+                    F = "Frame3"
+                    NAME = ("NQS" + str(o) + str(i))
+                    spacerFRM(self, F, NAME)
 
 
             self.pageTitle5.grid_remove()
@@ -676,7 +894,142 @@ class QTEGUI:
             self.pageTitle4.config(font=("TkDefaultFont", 30))
             self.pageTitle4.grid(row=2, column=1, columnspan=4, sticky=N)
 
+            self.ingredientsNQSL = Label(Frame3, text="Ingredients:")
+            self.ingredientsNQSL.grid(row=4, column=2, sticky=W)
+
+            self.ingredientsNQSE = Entry(Frame3, width=14)
+            self.ingredientsNQSE.grid(row=4, column=3, sticky=W)
+
+            tableNQS1()
+            tableFrameNQS1.grid(row=5, column=1, columnspan=4, sticky=N)
+
+            for o in range(6, 8):
+                for i in range(1, 5):
+                    F = "Frame3"
+                    NAME = ("NQS" + str(o) + str(i))
+                    H = 2
+                    WH = 16
+                    R = o
+                    C = i
+                    S = "W"
+                    spacerF(self, master, Frame1, Frame2, Frame3, F, NAME, H, WH, R, C, S)
+
+            self.extrasNQSL = Label(Frame3, text="Extras:")
+            self.extrasNQSL.grid(row=8, column=2, sticky=W)
+
+            self.extrasNQSE = Entry(Frame3, width=14)
+            self.extrasNQSE.grid(row=8, column=3, sticky=W)
+
+            tableNQS2()
+            tableFrameNQS2.grid(row=9, column=1, columnspan=4, sticky=N)
+
+            for o in range(10, 12):
+                for i in range(1, 5):
+                    F = "Frame3"
+                    NAME = ("NQS" + str(o) + str(i))
+                    H = 2
+                    WH = 16
+                    R = o
+                    C = i
+                    S = "W"
+                    spacerF(self, master, Frame1, Frame2, Frame3, F, NAME, H, WH, R, C, S)
+
+            self.labourNQSL = Label(Frame3, text="Labour:")
+            self.labourNQSL.grid(row=12, column=2, sticky=W)
+
+            self.labourNQSE = Entry(Frame3, width=14)
+            self.labourNQSE.grid(row=12, column=3, sticky=W)
+
+            for i in range(1, 5):
+                F = "Frame3"
+                NAME = ("NQS" + str(i))
+                H = 2
+                WH = 16
+                R = 13
+                C = i
+                S = "W"
+                spacerF(self, master, Frame1, Frame2, Frame3, F, NAME, H, WH, R, C, S)
+
+            self.labourNQSV = Label(Frame3, text="Variable")
+            self.labourNQSV.grid(row=14, column=2, columnspan=2, sticky=N)
+
+            for o in range(15, 17):
+                for i in range(1, 5):
+                    F = "Frame3"
+                    NAME = ("NQS" + str(o) + str(i))
+                    H = 2
+                    WH = 16
+                    R = o
+                    C = i
+                    S = "W"
+                    spacerF(self, master, Frame1, Frame2, Frame3, F, NAME, H, WH, R, C, S)
+
+
+            self.cancelNQSB = Button(Frame3, text="Cancel", command=newQuoteB)
+            self.cancelNQSB.config(font=("TkDefaultFont", 18))
+            self.cancelNQSB.grid(row=17, column=2, sticky=W)
+
+            self.saveNQSB = Button(Frame3, text="Save")
+            self.saveNQSB.config(font=("TkDefaultFont", 18))
+            self.saveNQSB.grid(row=17, column=3, sticky=E)
+
+            for o in range(18, 20):
+                for i in range(1, 5):
+                    F = "Frame3"
+                    NAME = ("NQS" + str(o) + str(i))
+                    H = 2
+                    WH = 16
+                    R = o
+                    C = i
+                    S = "W"
+                    spacerF(self, master, Frame1, Frame2, Frame3, F, NAME, H, WH, R, C, S)
+
+
             self.pageTitle4.grid_remove()
+            self.ingredientsNQSL.grid_remove()
+            self.ingredientsNQSE.grid_remove()
+            tableFrameNQS1.grid_remove()
+
+            for o in range(6, 8):
+                for i in range(1, 5):
+                    F = "Frame3"
+                    NAME = ("NQS" + str(o) + str(i))
+                    spacerFRM(self, F, NAME)
+
+            self.extrasNQSL.grid_remove()
+            self.extrasNQSE.grid_remove()
+            tableFrameNQS2.grid_remove()
+
+            for o in range(10, 12):
+                for i in range(1, 5):
+                    F = "Frame3"
+                    NAME = ("NQS" + str(o) + str(i))
+                    spacerFRM(self, F, NAME)
+
+            self.labourNQSL.grid_remove()
+            self.labourNQSE.grid_remove()
+
+            for i in range(1, 5):
+                F = "Frame3"
+                NAME = ("NQS" + str(i))
+                spacerFRM(self, F, NAME)
+
+            self.labourNQSV.grid_remove()
+
+            for o in range(15, 17):
+                for i in range(1, 5):
+                    F = "Frame3"
+                    NAME = ("NQS" + str(o) + str(i))
+                    spacerFRM(self, F, NAME)
+
+            self.cancelNQSB.grid_remove()
+            self.saveNQSB.grid_remove()
+
+            for o in range(18, 20):
+                for i in range(1, 5):
+                    F = "Frame3"
+                    NAME = ("NQS" + str(o) + str(i))
+                    spacerFRM(self, F, NAME)
 
             startUpE()
 
@@ -901,6 +1254,26 @@ class QTEGUI:
             # note here I have sent it root but you can also send it a frame
             self.newtable = cst(f, tableFrame)
             self.newtable.grid()
+
+        tableFrameNQS1 = Frame(Frame3)
+
+        def tableNQS1():
+            # Your csv file can contain as many rows and colums as needed
+            f = open("Ingredients.csv")
+
+            # note here I have sent it root but you can also send it a frame
+            self.newtable1 = cst(f, tableFrameNQS1)
+            self.newtable1.grid()
+
+        tableFrameNQS2 = Frame(Frame3)
+
+        def tableNQS2():
+            # Your csv file can contain as many rows and colums as needed
+            f = open("Ingredients.csv")
+
+            # note here I have sent it root but you can also send it a frame
+            self.newtable2 = cst(f, tableFrameNQS2)
+            self.newtable2.grid()
 
         self.titleText = Label(master, text="Bella Cake Art", height=1)
         self.titleText.grid(row=1, column=1, sticky=W),
