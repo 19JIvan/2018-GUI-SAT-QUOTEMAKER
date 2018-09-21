@@ -10,20 +10,20 @@ class QTEGUI:
 
         def settingsNQSS():
             Ingredients = {}
-            with open('Ingredients.csv', 'r') as csvfile:
-                ingReader = csv.reader(csvfile, delimiter=' ')
-                for row in ingReader:
-                    row = row[0].strip('\n')
-                    Ingredient, Prices = row.split(',')
-                    Ingredients[Ingredient] = Prices
+            #with open('Ingredients.csv', 'r') as csvfile:
+            #    ingReader = csv.reader(csvfile, delimiter=' ')
+            #    for row in ingReader:
+            #        row = row[0].strip('\n')
+            #        Ingredient, Prices = row.split(',')
+            #        Ingredients[Ingredient] = Prices
 
             Extras = {}
-            with open('Extras.csv', 'r') as csvfile:
-                extReader = csv.reader(csvfile, delimiter=' ')
-                for row in extReader:
-                    row = row[0].strip('\n')
-                    Extra, Prices = row.split(',')
-                    Extras[Extra] = Prices
+            #with open('Extras.csv', 'r') as csvfile:
+            #    extReader = csv.reader(csvfile, delimiter=' ')
+            #    for row in extReader:
+            #        row = row[0].strip('\n')
+            #        Extra, Prices = row.split(',')
+            #        Extras[Extra] = Prices
 
             ingName = self.ingredientsNQSE.get()
             ingPrice = self.ingredientsNQSEP.get()
@@ -36,8 +36,6 @@ class QTEGUI:
             Ingredients[ingName] = ingPrice
 
             Extras[extraName] = extraprice
-
-            startUpA()
 
             with open('Ingredients.csv', 'w') as csvfile:
                 ingWriter = csv.writer(csvfile, delimiter=',')
@@ -52,6 +50,8 @@ class QTEGUI:
             O = open("Labour", "w")
 
             O.write(labourPrice)
+
+            startUpA()
 
         def spacerFRG(self, F, NAME):
             name = ("Spacer" + NAME)
